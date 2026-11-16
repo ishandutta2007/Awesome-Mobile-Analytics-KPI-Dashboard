@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <linearGradient id="primary-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="line-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 42px;
+      fill: #ffffff;
+      letter-spacing: -0.5px;
+    }
+    .subtitle-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 17px;
+      fill: #94a3b8;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 12px;
+      fill: #38bdf8;
+    }
+    .stat-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      fill: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .stat-value {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      fill: #f1f5f9;
+    }
+
+    /* Animations */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.05); }
+    }
+    @keyframes floatCard1 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    @keyframes floatCard2 {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(8px); }
+    }
+    @keyframes dashMove {
+      0% { stroke-dashoffset: 600; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes barGrow {
+      0%, 100% { transform: scaleY(0.92); }
+      50% { transform: scaleY(1.08); }
+    }
+
+    .pulse-element {
+      animation: pulseGlow 6s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .floating-1 {
+      animation: floatCard1 5s ease-in-out infinite;
+    }
+    .floating-2 {
+      animation: floatCard2 6s ease-in-out infinite;
+    }
+    .animated-chart-line {
+      stroke-dasharray: 600;
+      animation: dashMove 4s linear infinite;
+    }
+    .bar-anim {
+      transform-origin: bottom;
+      animation: barGrow 4s ease-in-out infinite alternate;
+    }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)" />
+
+  <!-- Grid overlay -->
+  <g stroke="#334155" stroke-width="1" stroke-opacity="0.15">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="120" y1="0" x2="1200" y2="360" />
+    <line x1="240" y1="0" x2="240" y2="360" />
+    <line x1="360" y1="0" x2="360" y2="360" />
+    <line x1="480" y1="0" x2="480" y2="360" />
+    <line x1="600" y1="0" x2="600" y2="360" />
+    <line x1="720" y1="0" x2="720" y2="360" />
+    <line x1="840" y1="0" x2="840" y2="360" />
+    <line x1="960" y1="0" x2="960" y2="360" />
+    <line x1="1080" y1="0" x2="1080" y2="360" />
+  </g>
+
+  <!-- Background Glow Orbs -->
+  <circle cx="150" cy="80" r="140" fill="#38bdf8" opacity="0.12" filter="url(#glow)" class="pulse-element" />
+  <circle cx="1050" cy="220" r="160" fill="#a855f7" opacity="0.15" filter="url(#glow)" class="pulse-element" />
+  <circle cx="780" cy="100" r="100" fill="#6366f1" opacity="0.1" filter="url(#glow)" />
+
+  <!-- Interactive Dynamic Background Graphics (Right Side Dashboard Preview) -->
+  <g class="floating-1" transform="translate(780, 45)">
+    <!-- Main Dashboard Card -->
+    <rect width="360" height="210" rx="14" fill="url(#card-grad)" stroke="#334155" stroke-width="1.5" filter="url(#card-shadow)" />
+
+    <!-- Card Header / Nav Dots -->
+    <circle cx="24" cy="22" r="5" fill="#ef4444" />
+    <circle cx="38" cy="22" r="5" fill="#eab308" />
+    <circle cx="52" cy="22" r="5" fill="#22c55e" />
+    <rect x="75" y="15" width="120" height="14" rx="4" fill="#334155" opacity="0.6" />
+
+    <!-- Metric Pills in Card -->
+    <g transform="translate(20, 48)">
+      <rect width="95" height="42" rx="6" fill="#1e293b" stroke="#475569" stroke-width="0.8" />
+      <text x="10" y="18" class="stat-title">ACTIVE USERS</text>
+      <text x="10" y="34" class="stat-value">148.5K</text>
+    </g>
+    <g transform="translate(130, 48)">
+      <rect width="95" height="42" rx="6" fill="#1e293b" stroke="#475569" stroke-width="0.8" />
+      <text x="10" y="18" class="stat-title">CONVERSION</text>
+      <text x="10" y="34" class="stat-value" fill="#38bdf8">+14.2%</text>
+    </g>
+    <g transform="translate(240, 48)">
+      <rect width="95" height="42" rx="6" fill="#1e293b" stroke="#475569" stroke-width="0.8" />
+      <text x="10" y="18" class="stat-title">AVG RETENTION</text>
+      <text x="10" y="34" class="stat-value" fill="#22c55e">68.4%</text>
+    </g>
+
+    <!-- Mini Chart Area with animated trendline -->
+    <g transform="translate(20, 110)">
+      <rect width="315" height="78" rx="6" fill="#0b1329" fill-opacity="0.6" />
+      <!-- Bar charts -->
+      <rect x="25" y="45" width="14" height="25" rx="3" fill="#3b82f6" opacity="0.6" class="bar-anim" />
+      <rect x="55" y="35" width="14" height="35" rx="3" fill="#3b82f6" opacity="0.7" class="bar-anim" />
+      <rect x="85" y="25" width="14" height="45" rx="3" fill="#38bdf8" opacity="0.8" class="bar-anim" />
+      <rect x="115" y="40" width="14" height="30" rx="3" fill="#3b82f6" opacity="0.6" class="bar-anim" />
+      <rect x="145" y="20" width="14" height="50" rx="3" fill="#38bdf8" opacity="0.9" class="bar-anim" />
+      <rect x="175" y="30" width="14" height="40" rx="3" fill="#818cf8" opacity="0.7" class="bar-anim" />
+      <rect x="205" y="15" width="14" height="55" rx="3" fill="#a855f7" opacity="0.85" class="bar-anim" />
+      <rect x="235" y="25" width="14" height="45" rx="3" fill="#818cf8" opacity="0.8" class="bar-anim" />
+      <rect x="265" y="10" width="14" height="60" rx="3" fill="#c084fc" opacity="0.95" class="bar-anim" />
+
+      <!-- Spline Curve Overlay -->
+      <path d="M 20 60 Q 80 45, 140 25 T 280 15" fill="none" stroke="url(#line-glow)" stroke-width="3" filter="url(#glow)" class="animated-chart-line" />
+    </g>
+  </g>
+
+  <!-- Floating Mobile Device Accent Card -->
+  <g class="floating-2" transform="translate(710, 160)">
+    <rect width="130" height="155" rx="12" fill="#0f172a" stroke="#475569" stroke-width="1.5" filter="url(#card-shadow)" />
+    <!-- Phone speaker & notch -->
+    <rect x="45" y="8" width="40" height="4" rx="2" fill="#334155" />
+    <!-- App metric preview -->
+    <circle cx="65" cy="50" r="24" fill="none" stroke="#1e293b" stroke-width="5" />
+    <circle cx="65" cy="50" r="24" fill="none" stroke="#38bdf8" stroke-width="5" stroke-dasharray="100 150" stroke-linecap="round" />
+    <text x="65" y="54" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="700" fill="#ffffff">94.8%</text>
+    <text x="65" y="90" text-anchor="middle" class="stat-title">Crash-Free</text>
+    
+    <!-- Mini action button pill -->
+    <rect x="20" y="110" width="90" height="24" rx="12" fill="url(#primary-glow)" opacity="0.9" />
+    <text x="65" y="126" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="10" font-weight="700" fill="#0f172a">LIVE METRICS</text>
+  </g>
+
+  <!-- Foreground Content: Header, Badges, Titles, Descriptions -->
+  <g transform="translate(60, 60)">
+    <!-- Category Badge -->
+    <rect width="210" height="28" rx="14" fill="#0369a1" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1.2" />
+    <circle cx="16" cy="14" r="4" fill="#38bdf8" />
+    <text x="28" y="19" class="badge-text">📱 MOBILE ANALYTICS &amp; KPI</text>
+
+    <!-- Main Title (Gradient Accent) -->
+    <text x="0" y="82" class="title-text">
+      Mobile Analytics &amp;
+    </text>
+    <text x="0" y="132" class="title-text" fill="url(#primary-glow)">
+      KPI Dashboard
+    </text>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="172" class="subtitle-text">
+      Curated open-source toolkits, SDKs &amp; top SaaS platforms for
+    </text>
+    <text x="0" y="196" class="subtitle-text">
+      real-time user behavior, app telemetry, funnels &amp; product metrics.
+    </text>
+
+    <!-- Bottom Feature Pills -->
+    <g transform="translate(0, 222)">
+      <rect width="132" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="66" y="17" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">📊 Real-Time KPIs</text>
+
+      <rect x="142" width="135" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="209" y="17" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">📱 Mobile SDKs</text>
+
+      <rect x="287" width="150" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="362" y="17" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">⚡ Open-Source Ready</text>
+    </g>
+  </g>
+</svg>

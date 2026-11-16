@@ -1,144 +1,128 @@
-# Awesome-Mobile-Analytics-KPI-Dashboard
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Mobile Analytics &amp; KPI Dashboard Banner" width="100%">
+</p>
 
-# Awesome Mobile Analytics & KPI Dashboard
+# 📱 Awesome Mobile Analytics & KPI Dashboard 📊
 
-> A curated list of top Mobile Analytics and KPI Dashboard platforms — both SaaS/Hosted commercial solutions and open-source alternatives for tracking product metrics, visualizing KPIs, and understanding user behavior in mobile applications.
-> 🌟 Star this repo if you find it useful! 🌟
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Mobile-Analytics-KPI-Dashboard/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Mobile-Analytics-KPI-Dashboard?style=flat-square&logo=github&color=gold" alt="GitHub Repo Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Mobile-Analytics-KPI-Dashboard/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Mobile-Analytics-KPI-Dashboard?style=flat-square&logo=github&color=blue" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Mobile-Analytics-KPI-Dashboard/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC0_1.0-green.svg?style=flat-square" alt="License: CC0-1.0" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
----
-
-## 📋 Table of Contents
-
-- [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [Mixpanel](#mixpanel)
-  - [Amplitude](#amplitude)
-  - [Zoho Apptics](#zoho-apptics)
-  - [Datadog Mobile RUM](#datadog-mobile-rum)
-  - [UXCam](#uxcam)
-- [Open-Source Software](#-open-source-software)
-  - [OpenPanel](#openpanel)
-  - [PostHog](#posthog)
-  - [nilalytics](#nilalytics)
-  - [Umami (via umami_flutter)](#umami-via-umami_flutter)
-  - [Lens](#lens)
+> 🌟 **A definitive, SEO-optimized curated directory of Mobile Analytics platforms, KPI Dashboards, Real User Monitoring (RUM) tools, and Telemetry SDKs** — featuring both enterprise SaaS solutions and battle-tested open-source software for monitoring user journeys, funnels, retention, crash analytics, and core app metrics.
 
 ---
 
-## 🟦 SaaS / Hosted Platforms
+## 📑 Table of Contents
 
-Commercial, cloud-hosted Mobile Analytics and KPI Dashboard platforms. These are not open-source but are included as reference points for feature comparison.
-
-### Mixpanel
-**Type:** Event-based product analytics with funnel and retention analysis
-Mixpanel is built for product teams wanting self-serve analytics without SQL, with strong funnel analysis, retention curves, and user segmentation [citation:7]. It added session replay for mobile in 2025 and offers a free tier up to **20 million events/month** [citation:7]. The platform has **8.33% market share** in mobile analytics with **53,522 customers** globally [citation:4]. **Trade-off:** It is purely analytics-focused—no infrastructure features like crash reporting or push notifications [citation:7].
-
-### Amplitude
-**Type:** Product analytics with predictive modeling
-Amplitude offers similar capabilities to Mixpanel but is stronger on predictive analytics and cohort modeling, with its "Predict" feature using ML to score which users are likely to convert or churn [citation:7]. It holds **5.68% market share** with **36,496 customers** [citation:4]. The free starter plan covers up to **10 million events/month** [citation:7]. **Best for:** Data-heavy product teams with data scientists who want to build predictive models on behavioral data.
-
-### Zoho Apptics
-**Type:** End-to-end product analytics with native iOS app
-Zoho Apptics provides insights into app usage, health, performance, and engagement across mobile, web, and desktop apps, with a **native iOS app** for accessing KPIs on the go [citation:1]. Key mobile KPIs include app health (crashes, sessions), adoption (new devices, unique active devices, opt-in/opt-out devices), and engagement (sessions, screens, events, APIs) [citation:1]. It includes real-time crash reporting, in-app feedback, and **AI insights using Apple's on-device foundation models** for private analytics summaries [citation:1]. **Best for:** Teams already in the Zoho ecosystem wanting a privacy-focused analytics suite with a native mobile dashboard app.
-
-### Datadog Mobile RUM
-**Type:** Real User Monitoring tied to backend traces
-Datadog RUM provides mobile real user monitoring that correlates frontend mobile performance with backend traces, making it the strongest choice for teams already using Datadog for APM [citation:12]. It supports mobile-first frameworks including React Native and captures session replays alongside performance data [citation:12]. **Best for:** Teams needing backend correlation and already invested in Datadog's observability stack.
-
-### UXCam
-**Type:** Mobile product analytics with AI analyst and session replay
-UXCam records every session automatically without manual event tagging, capturing screens, taps, swipes, scrolls, and crashes [citation:9]. Its **Tara AI analyst** answers plain-language questions like "Why did checkout completion drop?" with numbers and linked session replays [citation:9]. It offers funnels, retention, segments, and KPI dashboards, with masking running in the SDK so sensitive content never leaves the device [citation:9]. It processes **100B+ data points monthly** and is SOC 2 Type II audited [citation:9]. **Best for:** Teams wanting session replay and AI-driven insights without manual event instrumentation.
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS / Hosted Commercial Platforms](#️-saas--hosted-commercial-platforms)
+- [🔓 Open-Source Software & Telemetry Frameworks](#-open-source-software--telemetry-frameworks)
+- [📊 Feature & Architectural Matrix](#-feature--architectural-matrix)
+- [📈 Star History](#-star-history)
+- [🤝 Contributing & Community](#-contributing--community)
+- [💖 Support & Sponsorship](#-support--sponsorship)
+- [📄 License](#-license)
 
 ---
 
-## 🟩 Open-Source Software
+## 🌐 Sector Overview & Market Dynamics
 
-Self-hosted, community-driven Mobile Analytics and KPI Dashboard tools. The open-source ecosystem spans **Mixpanel alternatives with mobile SDKs**, **OTel-native lakehouse analytics**, **privacy-first Flutter packages**, and **YAML-driven KPI dashboards**.
-
-### OpenPanel
-**Stack:** ClickHouse / PostgreSQL / Redis / Docker | **License:** Open Source (self-hostable)
-OpenPanel is an open-source product and web analytics platform positioned as a **Mixpanel and Amplitude alternative** [citation:8]. Key characteristics:
-- **Mobile SDKs**: React Native, iOS, and Android SDKs for tracking events from mobile apps [citation:8]
-- **Real-time dashboards**: Funnels, retention, user profiles, and sessions [citation:8]
-- **Cookieless option**: Can run without cookies for privacy-conscious deployments [citation:8]
-- **Self-hosted architecture**: Three apps (API, dashboard, worker) with ClickHouse for events, PostgreSQL for users/projects, and Redis for queues [citation:8]
-- **Deployment**: Railway template available that creates admin account, closes sign-up, and pins login cookies to your domain [citation:8]
-
-**Trade-off:** Self-hosting requires managing ClickHouse, PostgreSQL, and Redis—the seven services idle at approximately 1.7 GB of RAM [citation:8]. **Best for:** Teams wanting a self-hosted Mixpanel alternative with native mobile SDKs and ClickHouse-backed real-time analytics, accepting the infrastructure overhead.
-
-### PostHog
-**Stack:** TypeScript / ClickHouse / PostgreSQL | **License:** Apache-2.0 (core)
-PostHog bundles product analytics, feature flags, session replay, error tracking, and experiments in one SDK, with a **first-class React Native SDK** [citation:12]. It has the **best free tier in 2026** at **1 million events/month** including replay and flags, and can be self-hosted or used via cloud [citation:12]. The decision rubric in a 2026 RUM comparison recommends PostHog when "one product analytics tool, OSS preferred" is the priority [citation:12]. **Trade-off:** Self-hosting is heavy (ClickHouse, PostgreSQL, Redis) and the team steers most users to cloud. **Best for:** Teams wanting an all-in-one open-source analytics platform with mobile SDK support and a generous free tier.
-
-### nilalytics
-**Stack:** Python / DuckDB / OpenTelemetry / DuckLake | **License:** Apache-2.0
-nilalytics is a **batteries-included, OpenTelemetry-native** analytics platform for web and mobile that runs entirely on your own object storage [citation:2]. Key characteristics:
-- **Mobile support**: Collects events, errors, and performance data via **OpenTelemetry SDKs** (mobile + server) [citation:2]
-- **No warehouse, no per-event fees**: Stores data in a DuckLake lakehouse on S3, MinIO, GCS, Cloudflare R2, or Azure [citation:2]
-- **Built-in analytics**: Funnels, retention, errors, traces, metrics, and cross-device identity [citation:2]
-- **Secure by default**: Token-authenticated ingest and read-only query authorization [citation:2]
-- **Sub-second reads**: Via DuckDB's Quack protocol [citation:2]
-
-**Trade-off:** It is a newer project with a Python-based stack—you need object storage and familiarity with OTel concepts. **Best for:** Teams wanting OpenTelemetry-native mobile analytics with data staying entirely in their own object storage and no per-event pricing.
-
-### Umami (via umami_flutter)
-**Stack:** Flutter package / Umami server | **License:** MIT (package) / Umami open-source
-umami_flutter is a lightweight, privacy-focused Flutter package that connects to a self-hosted **Umami** analytics server, positioned as an open-source alternative to Firebase Analytics [citation:5]. Key characteristics:
-- **Privacy-first**: No cookies, no PII, no third-party data sharing—GDPR/CCPA friendly without consent banners [citation:5]
-- **Non-blocking**: Events tracked before initialization are queued and flushed automatically [citation:5]
-- **Automatic device info**: Collects device ID, locale, and screen resolution [citation:5]
-- **Tiny footprint**: ~9 KB compressed, with minimal dependencies [citation:5]
-- **Multi-platform**: Android, iOS, macOS, and Windows [citation:5]
-
-**Trade-off:** It tracks screen views and custom events but **drops events when offline** (no queuing) and does not provide user identity tracking [citation:5]. It is a lightweight event tracker rather than a full KPI dashboard. **Best for:** Flutter developers wanting simple, privacy-respecting event tracking with self-hosted Umami, accepting the limited analytics depth.
-
-### Lens
-**Stack:** Python / YAML / React | **License:** Open Source (PyPI)
-Lens is a YAML-driven analytics dashboarding library that generates a full React dashboard from a config file [citation:3]. Key characteristics:
-- **KPI widgets**: With trend indicators, formatting, and compact numbers [citation:3]
-- **Charts and tables**: Bar, line, area, pie, donut, horizontal bar, combo via ApexCharts, plus data tables with pagination and CSV export [citation:3]
-- **Filters**: Dropdown, date range, text search, number range, toggle [citation:3]
-- **Security**: Read-only queries, parameterized SQL, no raw SQL on the client [citation:3]
-- **Deployment**: `lens serve dashboard.yaml` starts the dashboard instantly [citation:3]
-
-**Trade-off:** It is a **dashboarding library** rather than an analytics backend—you must supply the SQL queries and data pipeline yourself. It has no built-in mobile SDK. **Best for:** Developers wanting a quick, YAML-configured KPI dashboard UI that connects to their own database, accepting that event collection must be handled separately.
+The global mobile analytics market is valued between **$8 billion and $14 billion** and is projected to expand at a compound annual growth rate (**CAGR of 16%–25%**) toward upwards of **$35 billion to $80 billion** over the next decade. The sector exhibits **moderate fragmentation** — balancing dominant cloud hyper-scalers (Google Firebase, Datadog, Adobe) with a thriving, highly competitive ecosystem of specialized product analytics and mobile experience platforms (such as Mixpanel, Amplitude, and UXCam) rather than operating as a pure "winner-take-all" monopoly.
 
 ---
 
-## 📊 Comparison at a Glance
+## ☁️ SaaS / Hosted Commercial Platforms
 
-| Software | License | Stack | Mobile SDK | Self-Hosted | KPI Dashboard | Best For |
-|----------|---------|-------|------------|-------------|---------------|----------|
-| **Mixpanel** | Proprietary | Cloud | ✅ React Native | ❌ | ✅ Funnels/retention | Product-led teams |
-| **Amplitude** | Proprietary | Cloud | ✅ React Native | ❌ | ✅ Predictive | Data-heavy teams |
-| **Zoho Apptics** | Proprietary | Cloud | ✅ Native iOS app | ❌ | ✅ On-the-go KPIs | Zoho ecosystem |
-| **UXCam** | Proprietary | Cloud | ✅ iOS/Android | ❌ | ✅ AI analyst | Session replay + AI |
-| **OpenPanel** | Open Source | ClickHouse/Postgres | ✅ iOS/Android/RN | ✅ | ✅ Funnels/retention | Self-hosted Mixpanel alt |
-| **PostHog** | Apache-2.0 | ClickHouse/Postgres | ✅ React Native | ✅ (Heavy) | ✅ All-in-one | OSS all-in-one |
-| **nilalytics** | Apache-2.0 | DuckDB/OTel | ✅ OTel SDKs | ✅ (Object storage) | ✅ Funnels/retention | OTel-native lakehouse |
-| **umami_flutter** | MIT | Flutter/Umami | ✅ Flutter | ✅ (Umami) | ❌ (Events only) | Privacy-first Flutter |
-| **Lens** | Open Source | Python/YAML/React | ❌ | ✅ (Library) | ✅ YAML-driven | Quick KPI dashboard UI |
+Commercial, cloud-hosted Mobile Analytics and KPI Dashboard suites. Sorted descending by company valuation / market capitalization:
+
+| Platform 🚀 | Primary Focus & Capabilities 🎯 | Starting Tier Price 💳 | Free Tier / Trial Allowance 🎁 | Company Scale (Valuation / Revenue) 🏢 |
+|---|---|---|---|---|
+| **[Datadog Mobile RUM](https://www.datadoghq.com/)** | Full-stack Real User Monitoring correlating frontend mobile app telemetry directly with APM distributed traces | **$0.15 per 1,000 sessions** (RUM Measure annual commitment) | **14-day free trial** with full platform capabilities, unrestricted session replay & APM tracing | **~$50B Market Cap** ($3.43B FY2025 Revenue) |
+| **[Zoho Apptics](https://www.zoho.com/apptics/)** | End-to-end privacy-focused mobile analytics suite with native iOS monitoring app, crash tracking & AI summaries | **$89 / month** billed monthly ($62 / month billed annually for Pro Tier) | **Free Forever plan**: 1 project, 5 apps, 5,000 errors/month, 25,000 tracked events & screen visits/month | **~$12B Estimated Valuation** ($1.4B+ Revenue) |
+| **[Amplitude](https://amplitude.com/)** | Behavioral product analytics, ML-driven user cohort modeling, predictive churn scoring & retention tracking | **$0 base / usage-based** (Plus tier starts at $0 with pay-as-you-go scaling above 2M events) | **Free Forever plan**: 2,000,000 (2M) events/month, unlimited seats & 10,000 session replays/month | **~$2.2B Market Cap** ($343M FY2025 Revenue) |
+| **[Mixpanel](https://mixpanel.com/)** | Self-serve event product analytics, mobile session replay, automated conversion funnels & retention cohorts | **$0 base / usage-based** (Growth tier starts at $0 with pay-as-you-go scaling above 1M events) | **Free Forever plan**: 1,000,000 (1M) events/month, unlimited team seats & 10,000 session replays/month | **~$1.05B Valuation** (~$210M ARR) |
+| **[UXCam](https://uxcam.com/)** | Tagless mobile session recording, automatic user interactions, rage-tap heatmaps & Tara AI conversational analyst | **Custom starting quote** (Starter package scales by monthly active session volume) | **Free Forever plan**: 3,000 sessions/month; or **14-day full trial** (up to 100,000 sessions & video replays) | **~$9.7M Seed Valuation** (~$6.3M ARR) |
 
 ---
 
-## 🤝 Contributing
+## 🔓 Open-Source Software & Telemetry Frameworks
 
-Contributions are welcome! If you know of an open-source Mobile Analytics or KPI Dashboard tool that should be listed here, please open a pull request with:
+Self-hosted, transparent, and community-maintained mobile analytics engines, event trackers, and KPI dashboard generators. Sorted descending by GitHub stargazers count:
 
-- Project name and URL
-- Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
+| Repository / Project 📦 | Stars 🌟 | Tech Stack 🛠️ | Mobile SDK Support 📲 | Primary Capability & Key Characteristics 🔍 |
+|---|---|---|---|---|
+| **[Grafana](https://github.com/grafana/grafana)** | [![GitHub stars](https://img.shields.io/github/stars/grafana/grafana?style=social&color=white)](https://github.com/grafana/grafana/stargazers) | Go / TypeScript / React | Via Faro Web/Mobile SDK & OTel | The industry-standard metric visualization and observability dashboard engine; pairs with Faro and OTel mobile collectors for real-time KPI graphs. |
+| **[Apache Superset](https://github.com/apache/superset)** | [![GitHub stars](https://img.shields.io/github/stars/apache/superset?style=social&color=white)](https://github.com/apache/superset/stargazers) | Python / TypeScript / React | Via SQL DB / Data Lake | Enterprise-grade business intelligence and KPI data exploration platform capable of connecting directly to mobile telemetry ClickHouse/PostgreSQL data warehouses. |
+| **[PostHog](https://github.com/PostHog/posthog)** | [![GitHub stars](https://img.shields.io/github/stars/PostHog/posthog?style=social&color=white)](https://github.com/PostHog/posthog/stargazers) | Python / TypeScript / ClickHouse | ✅ React Native, iOS, Android, Flutter | Complete open-source product analytics suite bundling session replay, feature flags, mobile A/B testing, and cohort KPI dashboards. |
+| **[Umami](https://github.com/umami-software/umami)** | [![GitHub stars](https://img.shields.io/github/stars/umami-software/umami?style=social&color=white)](https://github.com/umami-software/umami/stargazers) | Node.js / React / Prisma | Via Flutter/React Native integrations | Privacy-focused, GDPR-compliant lightweight analytics engine; track mobile screens, actions, and custom events without invasive cookies or PII. |
+| **[Plausible Analytics](https://github.com/plausible/analytics)** | [![GitHub stars](https://img.shields.io/github/stars/plausible/analytics?style=social&color=white)](https://github.com/plausible/analytics/stargazers) | Elixir / ClickHouse / PostgreSQL | Via Mobile REST API & Wrappers | Lightweight, cookie-free web and app analytics tool featuring real-time dashboarding, conversion goal tracking, and minimal performance overhead. |
+| **[Matomo](https://github.com/matomo-org/matomo)** | [![GitHub stars](https://img.shields.io/github/stars/matomo-org/matomo?style=social&color=white)](https://github.com/matomo-org/matomo/stargazers) | PHP / MySQL / Vue.js | ✅ iOS, Android (Native SDKs) | Comprehensive, privacy-preserving Google Analytics alternative with full data ownership, heatmaps, visitor logs, and dedicated native mobile tracking libraries. |
+| **[OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector)** | [![GitHub stars](https://img.shields.io/github/stars/open-telemetry/opentelemetry-collector?style=social&color=white)](https://github.com/open-telemetry/opentelemetry-collector/stargazers) | Go | ✅ OTel Android & Swift SDKs | Vendor-agnostic telemetry ingestion and proxying component; receives mobile traces, spans, crashes, and performance metrics for downstream processing. |
+| **[OpenPanel](https://github.com/Openpanel-dev/openpanel)** | [![GitHub stars](https://img.shields.io/github/stars/Openpanel-dev/openpanel?style=social&color=white)](https://github.com/Openpanel-dev/openpanel/stargazers) | ClickHouse / PostgreSQL / Redis | ✅ iOS, Android, React Native, Flutter | Direct self-hosted Mixpanel alternative featuring native mobile SDKs, sub-second ClickHouse queries, automated retention cohorts, and conversion funnels. |
+| **[Countly Server](https://github.com/Countly/countly-server)** | [![GitHub stars](https://img.shields.io/github/stars/Countly/countly-server?style=social&color=white)](https://github.com/Countly/countly-server/stargazers) | Node.js / MongoDB | ✅ iOS, Android, Flutter, React Native | Enterprise mobile product analytics platform with crash reporting, in-app messaging, user profiles, attribution tracking, and push notifications. |
+| **[umami_flutter](https://github.com/Solvro/lib-mobile-flutter-umami)** | [![GitHub stars](https://img.shields.io/github/stars/Solvro/lib-mobile-flutter-umami?style=social&color=white)](https://github.com/Solvro/lib-mobile-flutter-umami/stargazers) | Dart / Flutter | ✅ Flutter cross-platform | Lightweight client package bringing privacy-first, cookieless Umami event telemetry to Android, iOS, macOS, and desktop apps. |
+| **[kb-yaml-to-lens](https://github.com/strawgate/kb-yaml-to-lens)** | [![GitHub stars](https://img.shields.io/github/stars/strawgate/kb-yaml-to-lens?style=social&color=white)](https://github.com/strawgate/kb-yaml-to-lens/stargazers) | Python / YAML | ❌ (Dashboard compiler) | Declarative YAML-to-Kibana Lens dashboard compiler; simplifies deploying version-controlled KPI cards, horizontal bar metrics, and trend charts. |
+| **[nilalytics](https://github.com/Angelerator/nilalytics)** | [![GitHub stars](https://img.shields.io/github/stars/Angelerator/nilalytics?style=social&color=white)](https://github.com/Angelerator/nilalytics/stargazers) | Python / DuckDB / OpenTelemetry | ✅ OpenTelemetry Mobile SDKs | Batteries-included, lakehouse-native analytics platform storing mobile app telemetry directly in user-managed S3/R2/GCS buckets with zero per-event fees. |
 
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source.
+---
 
-**Note on the open-source ecosystem:** The open-source landscape for **mobile analytics** is **growing but fragmented**. **PostHog** is the most complete all-in-one option with a first-class React Native SDK and the best free tier, though self-hosting is heavy [citation:12]. **OpenPanel** is the most direct Mixpanel alternative, with native iOS/Android/React Native SDKs and ClickHouse-backed funnels and retention, deployable via Railway [citation:8]. **nilalytics** takes a fundamentally different approach—OpenTelemetry-native, storing everything in your own object storage with no per-event fees [citation:2]. For Flutter developers, **umami_flutter** offers privacy-first event tracking but lacks KPI dashboards and offline queuing [citation:5]. **Lens** fills the dashboarding layer for teams that already have a database and want a quick YAML-configured KPI UI [citation:3]. No single open-source project fully replicates Mixpanel's funnel depth combined with Zoho Apptics' native mobile dashboard experience, but OpenPanel and PostHog cover the core mobile analytics workflow comprehensively.
+## 📊 Feature & Architectural Matrix
+
+| Platform / Tool 💻 | License 📜 | Deployment Mode ☁️ | First-Class Mobile SDK 📱 | KPI Dashboard 📈 | Session Replay 🎥 | Best Use Case 🎯 |
+|---|---|---|---|---|---|---|
+| **Datadog RUM** | Proprietary | SaaS | ✅ React Native, iOS, Android | ✅ Full APM Dashboards | ✅ Included | End-to-end full stack APM & frontend correlation |
+| **Zoho Apptics** | Proprietary | SaaS | ✅ iOS, Android | ✅ Native iOS & Web | ❌ | Privacy-conscious teams in the Zoho ecosystem |
+| **Amplitude** | Proprietary | SaaS | ✅ React Native, iOS, Android | ✅ Predictive Cohorts | ✅ Included | Data-science-driven predictive behavioral modeling |
+| **Mixpanel** | Proprietary | SaaS | ✅ React Native, iOS, Android | ✅ Funnels & Retention | ✅ Included | Fast, self-serve product analytics without SQL |
+| **UXCam** | Proprietary | SaaS | ✅ Native iOS & Android | ✅ AI-Assisted KPIs | ✅ Core Feature | Granular UX session replay with automatic tagging |
+| **Grafana** | AGPL-3.0 | Self-Hosted / Cloud | Via Faro / OTel | ✅ Industry Standard | ❌ | High-scale unified metrics & observability dashboards |
+| **Apache Superset**| Apache-2.0 | Self-Hosted / Cloud | Via Lakehouse / DB | ✅ Deep BI Dashboards | ❌ | SQL-first business intelligence and executive KPIs |
+| **PostHog** | Apache-2.0 | Self-Hosted / Cloud | ✅ Native & Cross-Platform | ✅ Comprehensive | ✅ Included | Full-featured all-in-one open-source product stack |
+| **Umami** | MIT | Self-Hosted / Cloud | Via Flutter & Wrappers | ✅ Clean Minimalist | ❌ | Simple, GDPR-compliant event tracking without cookies |
+| **Plausible** | AGPL-3.0 | Self-Hosted / Cloud | Via API & Client SDKs | ✅ Lightweight KPI | ❌ | Privacy-first aggregate metrics with zero bloat |
+| **Matomo** | GPL-3.0 | Self-Hosted / Cloud | ✅ Native iOS & Android | ✅ Traditional BI | ❌ | Total on-premise data governance & compliance |
+| **OpenTelemetry** | Apache-2.0 | Infrastructure | ✅ iOS, Android SDKs | ❌ (Collector layer) | ❌ | Standardized open ingestion pipeline for telemetry |
+| **OpenPanel** | MIT / AGPL | Self-Hosted / Cloud | ✅ iOS, Android, RN | ✅ Funnels & Cohorts | ❌ | ClickHouse-speed self-hosted Mixpanel alternative |
+| **Countly** | AGPL-3.0 | Self-Hosted / Cloud | ✅ iOS, Android, Flutter | ✅ Complete Mobile Suite | ❌ | Real-time mobile APM, push triggers & telemetry |
+| **nilalytics** | Apache-2.0 | Self-Hosted / S3 | ✅ Via OpenTelemetry | ✅ Lakehouse UI | ❌ | Object-storage mobile analytics without cloud markups |
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Mobile-Analytics-KPI-Dashboard&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Mobile-Analytics-KPI-Dashboard&type=date&legend=top-left)
+
+---
+
+## 🤝 Contributing & Community
+
+Contributions are warmly welcomed! If you maintain or use a mobile analytics framework or KPI dashboard tool that fits this list:
+
+1. **Fork the repository** 🍴
+2. **Add the software entry** in appropriate alphabetical or star-ranked order 📝
+3. **Include licensing, stack, mobile SDK support, and key highlights** ✨
+4. **Submit a pull request** with a concise description of why it belongs here 🚀
+
+---
+
+## 💖 Support & Sponsorship
+
+If you found this curated directory useful for selecting your mobile analytics stack or building your app KPI dashboards, please consider supporting the project:
+
+- 🌟 **Star the repository** to boost discoverability for fellow developers!
+- 🍴 **Fork the repo** to keep a reference or contribute additions.
+- 📣 **Share with peers** building mobile apps on iOS, Android, React Native, or Flutter.
+- ☕ **Buy a coffee & sponsor ongoing maintenance:** [Sponsor @ishandutta2007 on GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007)
+
+Thank you so much for your support! ❤️
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
-
----
-
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+This repository is distributed under the **CC0 1.0 Universal (Public Domain Dedication)** license. Third-party projects, brands, and repositories cited remain property of their respective maintainers.
